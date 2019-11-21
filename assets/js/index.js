@@ -44,10 +44,6 @@ function empty (el) {
   return el
 }
 
-function updateView (el, value) {
-  document.querySelector
-}
-
 function renderOldPasswords (list) {
   const el = empty(document.querySelector('.old-gens'))
 
