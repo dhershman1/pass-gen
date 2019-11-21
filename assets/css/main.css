@@ -1,0 +1,56 @@
+body {
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+.options,
+.password,
+.old-gens {
+  width: 50%;
+  margin: 0.5rem auto;
+  padding: 0.5rem 0;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: .25rem;
+}
+
+.btn {
+  background-color: #007E80;
+  color: #FFF;
+  padding: 0.5rem;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: rgb(1, 164, 167);
+}
+
+.check-label {
+  padding: 0.2rem;
+}
+
+label {
+  display: block;
+}
