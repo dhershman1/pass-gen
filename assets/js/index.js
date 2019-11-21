@@ -74,13 +74,24 @@ function generate (opts) {
 }
 
 // Watch our options for user interaction
-document.querySelectorAll('.opt').forEach(el => el.addEventListener('change', function (e) {
-  if (e.target.id === 'length') {
-    length = Number(e.target.value)
+document.querySelectorAll('.opt').forEach(el => {
+  // We need to loop through the checkboxes because on page refresh they stay checked
+  // And length inputs stay populated, so make sure to set our options on load
+  if (el.id === 'length') {
+    length = Number(el.value)
   } else {
-    options[e.target.id] = e.target.checked
+    options[el.id] = el.checked
   }
-}))
+
+  // Add event listeners for future changes
+  el.addEventListener('change', function (e) {
+    if (e.target.id === 'length') {
+      length = Number(e.target.value)
+    } else {
+      options[e.target.id] = e.target.checked
+    }
+  })
+})
 
 // Watch our copy to clipboard button
 document.querySelector('#copy').addEventListener('click', function () {
@@ -96,5 +107,4 @@ document.querySelector('#generate').addEventListener('click', function () {
   } else {
     document.querySelector('.error').classList.remove('hidden')
   }
-
 })
